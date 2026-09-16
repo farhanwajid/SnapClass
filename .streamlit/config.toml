@@ -1,0 +1,7 @@
+[theme]
+base = "light"
+textColor = "#000000"
+
+[server]
+runOnSave = true
+fileWatcherType = "auto"

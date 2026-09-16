@@ -1,4 +1,12 @@
+import sys
 import streamlit as st
+import warnings
+warnings.filterwarnings('ignore')
+
+# Clear stale module cache to prevent hot-reload KeyErrors
+for mod in list(sys.modules.keys()):
+    if mod.startswith("src."):
+        del sys.modules[mod]
 
 from src.screens.home_screen import home_screen
 from src.screens.student_screen import student_screen
